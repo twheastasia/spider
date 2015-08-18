@@ -1,0 +1,389 @@
+
+
+	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+	<html> 
+	<head> 
+		<meta http-equiv="Content-Type" content="text/html; charset="utf-8"> 
+		<meta http-equiv="Content-Language" content="zh-CN">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<script type="text/javascript" src="/maile/scripts/js/jquery/jquery-1.7.1.js"></script>
+		<script type="text/javascript" src="/maile/scripts/js/default/js.extends.js"></script>
+			<script type="text/javascript" src="/maile/scripts/js/site/shtml.js"></script>
+			<link type="text/css" rel="stylesheet" href="/maile/scripts/css/site/shtml.css"/>
+	<script type="text/javascript" src="/maile/scripts/js/site/office/AreaOffice.js"></script>
+	<link type="text/css" rel="stylesheet" href="/maile/scripts/css/site/office/AreaOffice.css"/>
+	<link type="text/css" rel="stylesheet" href="/maile/scripts/css/default/defrault.css"/>
+		<script type="text/javascript">
+			function locationPage(page_no) {
+				$("#page_no").val(page_no);
+				$("form").submit();
+			}
+			function queryAreaOffice(area_code) {
+				$("#area_code").val(area_code);
+				$("#page_no").val(1);
+				$("form").submit();
+			}
+			
+		</script>
+		<title>宁夏回族自治区教育厅</title> 
+	</head>
+	<body>
+		<!-- 头部div，包含网站LOGO、菜单栏、天气预报 -->
+		<div id="header-div">
+			<div id="logo-div">
+				<img id="logo-img" src="/maile/images/site/icon/website_logo.png"/>
+				<div id="logo-bg-div"></div>
+			</div>
+			<div id="menu-bar-div">
+				<ul>
+					<li><a target="_blank" href="/maile/index.html">网站主页</a></li>
+					<li><a target="_blank" href="/maile/snewslist/m003001">教育新闻</a></li>
+					<li><a target="_blank" href="/maile/snewslist/m003002">政务公开</a></li>
+					<li><a target="_blank" href="/maile/gzhd/queryletter.html">公众互动</a></li>
+					<li><a target="_blank" href="/maile/online.html">网上办事</a></li>
+					<li><a target="_blank" href="http://zyk.nxedu.gov.cn/s_dangjian/">党建思政</a></li>
+					<li><a target="_blank" href="/maile/snewslist/m003007">民办教育</a></li>
+					<li><a target="_blank" href="http://zyk.nxedu.gov.cn/s_nxjyxxh/index.html">专题专栏</a></li>
+					<li><a target="_blank" href="http://zyk.nxedu.gov.cn/main/index.html">资源平台</a></li>
+					<li><a target="_blank" href="/maile/snewslist/m003006">教育知识</a></li>
+					<li><a target="_blank" href="http://old.nxedu.gov.cn/">访问旧站</a></li>
+				</ul>
+				<div>
+					<table><tr>
+						<td width="280px"><div>今天是：2015年08月18　星期二</div></td>
+						<td width="280px">
+							<div id="#weather-iframe-div">
+							<div><iframe width="280px" scrolling="no" height="25px" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=34&icon=1&num=3"></iframe></div>
+						</td>
+						<td width="300px"><div><form id="query-news-form" action="/maile/snewslist.html" method="post">
+							<input type="text" name='news_title' id='news_title'/><a href="javascript:void(0);" onclick="javascript:$('#query-news-form').submit();"><img src="/maile/images/site/icon/search_red.png"></img></a>
+						</form></div></td>
+						<td width="150px" id="login-td" ><div><a target="_blank" href="/maile/login.html"><img src="/maile/images/site/icon/userlogin.png"/>用户登录</a></div></td>
+					</tr></table>
+				</div>
+			</div>
+		</div>
+		<div id="container">
+			<div id="href-bar" class="full-width">
+				<a href="/maile/index.html">首页</a>
+					---<a href="javascript:location.reload();">小学教育</a>
+			</div>
+			<div class="div_split_bar8"></div>
+			<div id="content-div">
+	<form id="page-form" action="/maile/office/areaoffice.html" method="post"  class="cls-form">			<!--左边的导航-->
+	        <div class="resource_mulu_left">
+	            	<span class="daohangtitle">宁夏回族自治区教育厅</span>
+	                <span class="daohanglist" id="xueshengmulu">
+	                			<li id="009001" class="keti_unit"><div onclick='javascript:queryAreaOffice("009001");'>教育厅直属</div></li>
+			                		<span style="display:none;">
+									</span>
+	                			<input type="hidden" id="area_code"  name="area_code" value="009002003"/>
+	                			<li id="009002" class="keti_unit open"><div onclick='javascript:queryAreaOffice("009002");'>银川市</div></li>
+			                		<span >
+												<li id="009002001" class="keti_normal"><div onclick='javascript:queryAreaOffice("009002001");'>银川市直属</div></li>
+												<li id="009002002" class="keti_normal"><div onclick='javascript:queryAreaOffice("009002002");'>兴庆区</div></li>
+												<li id="009002003" class="keti_normal selected"><div onclick='javascript:queryAreaOffice("009002003");'>西夏区</div></li>
+												<li id="009002004" class="keti_normal"><div onclick='javascript:queryAreaOffice("009002004");'>金凤区</div></li>
+												<li id="009002005" class="keti_normal"><div onclick='javascript:queryAreaOffice("009002005");'>永宁县</div></li>
+												<li id="009002006" class="keti_normal"><div onclick='javascript:queryAreaOffice("009002006");'>贺兰县</div></li>
+												<li id="009002007" class="keti_normal"><div onclick='javascript:queryAreaOffice("009002007");'>灵武市</div></li>
+									</span>
+	                			<input type="hidden" id="area_code"  name="area_code" value="009002003"/>
+	                			<li id="009003" class="keti_unit"><div onclick='javascript:queryAreaOffice("009003");'>石嘴山市</div></li>
+			                		<span style="display:none;">
+												<li id="009003001" class="keti_normal"><div onclick='javascript:queryAreaOffice("009003001");'>石嘴山市直属</div></li>
+												<li id="009003002" class="keti_normal"><div onclick='javascript:queryAreaOffice("009003002");'>大武口区</div></li>
+												<li id="009003003" class="keti_normal"><div onclick='javascript:queryAreaOffice("009003003");'>惠农区</div></li>
+												<li id="009003004" class="keti_normal"><div onclick='javascript:queryAreaOffice("009003004");'>平罗县</div></li>
+									</span>
+	                			<input type="hidden" id="area_code"  name="area_code" value="009002003"/>
+	                			<li id="009004" class="keti_unit"><div onclick='javascript:queryAreaOffice("009004");'>吴忠市</div></li>
+			                		<span style="display:none;">
+												<li id="009004001" class="keti_normal"><div onclick='javascript:queryAreaOffice("009004001");'>吴忠市直属</div></li>
+												<li id="009004002" class="keti_normal"><div onclick='javascript:queryAreaOffice("009004002");'>利通区</div></li>
+												<li id="009004003" class="keti_normal"><div onclick='javascript:queryAreaOffice("009004003");'>红寺堡区</div></li>
+												<li id="009004004" class="keti_normal"><div onclick='javascript:queryAreaOffice("009004004");'>盐池县</div></li>
+												<li id="009004005" class="keti_normal"><div onclick='javascript:queryAreaOffice("009004005");'>同心县</div></li>
+												<li id="009004006" class="keti_normal"><div onclick='javascript:queryAreaOffice("009004006");'>青铜峡市</div></li>
+									</span>
+	                			<input type="hidden" id="area_code"  name="area_code" value="009002003"/>
+	                			<li id="009005" class="keti_unit"><div onclick='javascript:queryAreaOffice("009005");'>固原市</div></li>
+			                		<span style="display:none;">
+												<li id="009005001" class="keti_normal"><div onclick='javascript:queryAreaOffice("009005001");'>固原市直属</div></li>
+												<li id="009005002" class="keti_normal"><div onclick='javascript:queryAreaOffice("009005002");'>原州区</div></li>
+												<li id="009005003" class="keti_normal"><div onclick='javascript:queryAreaOffice("009005003");'>西吉区</div></li>
+												<li id="009005004" class="keti_normal"><div onclick='javascript:queryAreaOffice("009005004");'>隆德县</div></li>
+												<li id="009005005" class="keti_normal"><div onclick='javascript:queryAreaOffice("009005005");'>泾源县</div></li>
+												<li id="009005006" class="keti_normal"><div onclick='javascript:queryAreaOffice("009005006");'>彭阳县</div></li>
+									</span>
+	                			<input type="hidden" id="area_code"  name="area_code" value="009002003"/>
+	                			<li id="009006" class="keti_unit"><div onclick='javascript:queryAreaOffice("009006");'>中卫市</div></li>
+			                		<span style="display:none;">
+												<li id="009006001" class="keti_normal"><div onclick='javascript:queryAreaOffice("009006001");'>中卫市直属</div></li>
+												<li id="009006002" class="keti_normal"><div onclick='javascript:queryAreaOffice("009006002");'>沙坡头区</div></li>
+												<li id="009006003" class="keti_normal"><div onclick='javascript:queryAreaOffice("009006003");'>中宁县</div></li>
+												<li id="009006004" class="keti_normal"><div onclick='javascript:queryAreaOffice("009006004");'>海原县</div></li>
+									</span>
+	                			<input type="hidden" id="area_code"  name="area_code" value="009002003"/>
+	                			<li id="009007" class="keti_unit"><div onclick='javascript:queryAreaOffice("009007");'>宁东能源化工基地</div></li>
+			                		<span style="display:none;">
+									</span>
+	                			<input type="hidden" id="area_code"  name="area_code" value="009002003"/>
+					</span>
+	        </div>
+			<div style="width:782px; float:right;">
+				<div id="search-box-center">
+					<table>
+						<tr>
+							<td width="120px" style="text-align: right;padding-right: 5px;position: relative;top:2px;"><label>学校(单位)名称</label></td>
+							<td style="position: relative;bottom: 3px;">	<input type="text" id="depart_name" name="depart_name"   autocomplete="off" class="cls-input-text" style="width:200px;height:18px;line-height:18px;"/>
+</td>
+							<td width="120px" style="text-align: right;padding-right: 5px;position: relative;top:2px;"><label>学校(单位)类别</label></td>
+							<td>	<div class="cls-combox" style="cursor:pointer;width:210px;">
+	    <span style="width:210px;" class="text open">请选择...</span>
+	    <ul style="display: none; width:210px;">
+		    		<li style="cursor: pointer;" val="" >请选择...</li>
+		    		<li style="cursor: pointer;" val="008001001001" >幼儿园</li>
+		    		<li style="cursor: pointer;" val="008001001002" class="selected">小学</li>
+		    		<li style="cursor: pointer;" val="008001001003" >中学</li>
+		    		<li style="cursor: pointer;" val="008001001004" >中职</li>
+		    		<li style="cursor: pointer;" val="008001001005" >大学</li>
+		    		<li style="cursor: pointer;" val="008001001003001" >初中</li>
+		    		<li style="cursor: pointer;" val="008001001003002" >高中</li>
+		    		<li style="cursor: pointer;" val="008001001005001" >大专</li>
+		    		<li style="cursor: pointer;" val="008001001005002" >本科</li>
+		    		<li style="cursor: pointer;" val="008001003001" >特殊教育</li>
+		    		<li style="cursor: pointer;" val="008001001006" >培训机构</li>
+	    </ul>
+	    <input id="dtype" name="dtype" type="hidden" value="008001001002"/>
+	</div>
+</td>
+						</tr>
+						<tr>
+							<td colspan="4" style="text-align: right;">
+	<button type="button" id="btn_query" name="btn_query"  class="cls-button">查询</button>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div style="width: 100%;">
+					<table class="result-table">
+						<tr>
+								<th>序号</th>
+								<th>学校名称</th>
+								<th>学校地址</th>
+								<th>类别</th>
+								<th>网址</th>
+						</tr>
+						<tr>
+							<td style="width:10%;">1</td>
+							<td style="width:30%;text-align: left;">宁夏农林科学院附属小学</td>
+							<td style="width:30%;text-align: left;">宁夏银川市西夏区芦花台园林声场</td>
+								<td style="width:10%;">小学</td>
+							<td style="width:20%;text-align: left;"><a target="_blank" href="http://www.nxzyk.com">http://www.nxzyk.com</a></td>
+						<tr>
+						<tr>
+							<td style="width:10%;">2</td>
+							<td style="width:30%;text-align: left;">西夏区兴泾镇回民一小</td>
+							<td style="width:30%;text-align: left;">银川市西夏区兴泾镇西干村兴泾回民一小</td>
+								<td style="width:10%;">小学</td>
+							<td style="width:20%;text-align: left;"><a target="_blank" href="http://xxqxj1x.30edu.com/">http://xxqxj1x.30edu.com/</a></td>
+						<tr>
+						<tr>
+							<td style="width:10%;">3</td>
+							<td style="width:30%;text-align: left;">西夏区兴泾镇回民三小</td>
+							<td style="width:30%;text-align: left;">银川市西夏区兴泾镇泾华村</td>
+								<td style="width:10%;">小学</td>
+							<td style="width:20%;text-align: left;"><a target="_blank" href="http://xjzhmsx.30edu.com/">http://xjzhmsx.30edu.com/</a></td>
+						<tr>
+						<tr>
+							<td style="width:10%;">4</td>
+							<td style="width:30%;text-align: left;">西夏区兴泾镇回民二小</td>
+							<td style="width:30%;text-align: left;">银川市西夏区兴泾镇泾河村</td>
+								<td style="width:10%;">小学</td>
+							<td style="width:20%;text-align: left;"><a target="_blank" href="http://www.nxzyk.com">http://www.nxzyk.com</a></td>
+						<tr>
+						<tr>
+							<td style="width:10%;">5</td>
+							<td style="width:30%;text-align: left;">西夏区兴泾镇回民四小</td>
+							<td style="width:30%;text-align: left;">西夏区兴泾镇十里铺村</td>
+								<td style="width:10%;">小学</td>
+							<td style="width:20%;text-align: left;"><a target="_blank" href="http://xjsx.30edu.com/">http://xjsx.30edu.com/</a></td>
+						<tr>
+						<tr>
+							<td style="width:10%;">6</td>
+							<td style="width:30%;text-align: left;">西夏区南梁小学</td>
+							<td style="width:30%;text-align: left;">银川市西夏区南梁农场场部</td>
+								<td style="width:10%;">小学</td>
+							<td style="width:20%;text-align: left;"><a target="_blank" href="http://xxnlxx.30edu.com/">http://xxnlxx.30edu.com/</a></td>
+						<tr>
+						<tr>
+							<td style="width:10%;">7</td>
+							<td style="width:30%;text-align: left;">西夏区回民小学</td>
+							<td style="width:30%;text-align: left;">银川市西夏区同心北路444号</td>
+								<td style="width:10%;">小学</td>
+							<td style="width:20%;text-align: left;"><a target="_blank" href="http://xxhx.30edu.com/">http://xxhx.30edu.com/</a></td>
+						<tr>
+						<tr>
+							<td style="width:10%;">8</td>
+							<td style="width:30%;text-align: left;">西夏区平吉堡小学</td>
+							<td style="width:30%;text-align: left;">宁夏银川市西夏区平吉堡小学</td>
+								<td style="width:10%;">小学</td>
+							<td style="width:20%;text-align: left;"><a target="_blank" href="http://xxpjixx.30edu.com/">http://xxpjixx.30edu.com/</a></td>
+						<tr>
+						<tr>
+							<td style="width:10%;">9</td>
+							<td style="width:30%;text-align: left;">西夏区第一小学</td>
+							<td style="width:30%;text-align: left;">银川市西夏区</td>
+								<td style="width:10%;">小学</td>
+							<td style="width:20%;text-align: left;"><a target="_blank" href="http://www.xixiayixiao.30edu.com/">http://www.xixiayixiao.30edu.com/</a></td>
+						<tr>
+						<tr>
+							<td style="width:10%;">10</td>
+							<td style="width:30%;text-align: left;">西夏区第七小学</td>
+							<td style="width:30%;text-align: left;">银川市西夏区怀远西路恩和巷6号</td>
+								<td style="width:10%;">小学</td>
+							<td style="width:20%;text-align: left;"><a target="_blank" href="http://xx7x.cn21edu.com/">http://xx7x.cn21edu.com/</a></td>
+						<tr>
+						<tr>
+							<td style="width:10%;">11</td>
+							<td style="width:30%;text-align: left;">西夏区第三小学</td>
+							<td style="width:30%;text-align: left;">西夏区北京西路251号</td>
+								<td style="width:10%;">小学</td>
+							<td style="width:20%;text-align: left;"><a target="_blank" href="http://xx3x.30edu.com/">http://xx3x.30edu.com/</a></td>
+						<tr>
+						<tr>
+							<td style="width:10%;">12</td>
+							<td style="width:30%;text-align: left;">西夏区第九小学</td>
+							<td style="width:30%;text-align: left;">银川市西夏区怀远西路欣益巷9号</td>
+								<td style="width:10%;">小学</td>
+							<td style="width:20%;text-align: left;"><a target="_blank" href="http://ycxx9x.30edu.com/">http://ycxx9x.30edu.com/</a></td>
+						<tr>
+						<tr>
+							<td style="width:10%;">13</td>
+							<td style="width:30%;text-align: left;">西夏区第二小学</td>
+							<td style="width:30%;text-align: left;">银川市西夏区宁华路1050号</td>
+								<td style="width:10%;">小学</td>
+							<td style="width:20%;text-align: left;"><a target="_blank" href="http://xx2x.30edu.com/">http://xx2x.30edu.com/</a></td>
+						<tr>
+						<tr>
+							<td style="width:10%;">14</td>
+							<td style="width:30%;text-align: left;">西夏区第五小学</td>
+							<td style="width:30%;text-align: left;">银川市西夏区怀远东路沟沿巷57号</td>
+								<td style="width:10%;">小学</td>
+							<td style="width:20%;text-align: left;"><a target="_blank" href="http://xx5x.30edu.com/">http://xx5x.30edu.com/</a></td>
+						<tr>
+						<tr>
+							<td style="width:10%;">15</td>
+							<td style="width:30%;text-align: left;">西夏区第八小学</td>
+							<td style="width:30%;text-align: left;">黄河西路12号</td>
+								<td style="width:10%;">小学</td>
+							<td style="width:20%;text-align: left;"><a target="_blank" href="http://xx8x.30edu.com/">http://xx8x.30edu.com/</a></td>
+						<tr>
+						<tr>
+							<td style="width:10%;">16</td>
+							<td style="width:30%;text-align: left;">西夏区第六小学</td>
+							<td style="width:30%;text-align: left;">宁夏银川市西花园北巷100号</td>
+								<td style="width:10%;">小学</td>
+							<td style="width:20%;text-align: left;"><a target="_blank" href="http://xx6x.30edu.com/">http://xx6x.30edu.com/</a></td>
+						<tr>
+						<tr>
+							<td style="width:10%;">17</td>
+							<td style="width:30%;text-align: left;">西夏区第十一小学</td>
+							<td style="width:30%;text-align: left;">宁夏银川市西夏区怀远东路广育巷18号</td>
+								<td style="width:10%;">小学</td>
+							<td style="width:20%;text-align: left;"><a target="_blank" href="http://xxsyx.30edu.com/">http://xxsyx.30edu.com/</a></td>
+						<tr>
+						<tr>
+							<td style="width:10%;">18</td>
+							<td style="width:30%;text-align: left;">西夏区第十二小学</td>
+							<td style="width:30%;text-align: left;">西夏区北京西路西夏小区内</td>
+								<td style="width:10%;">小学</td>
+							<td style="width:20%;text-align: left;"><a target="_blank" href="http://xx12x.30edu.com/">http://xx12x.30edu.com/</a></td>
+						<tr>
+						<tr>
+							<td style="width:10%;">19</td>
+							<td style="width:30%;text-align: left;">西夏区第十五小学</td>
+							<td style="width:30%;text-align: left;">北京西路750号</td>
+								<td style="width:10%;">小学</td>
+							<td style="width:20%;text-align: left;"><a target="_blank" href="http://ycsxxqswxx.30edu.com/">http://ycsxxqswxx.30edu.com/</a></td>
+						<tr>
+						<tr>
+							<td style="width:10%;">20</td>
+							<td style="width:30%;text-align: left;">西夏区第十六小学</td>
+							<td style="width:30%;text-align: left;">西夏区济民路以北文萃南路延伸线以东</td>
+								<td style="width:10%;">小学</td>
+							<td style="width:20%;text-align: left;"><a target="_blank" href="http://www.nxzyk.com/">http://www.nxzyk.com/</a></td>
+						<tr>
+					</table>
+				</div>
+				<div class="bottom-page-div">
+					<div class="record-num">
+						共有 <span id="record_count" class="ui_txt_bold04">31</span> 条记录，当前第 <span class="ui_txt_bold04">1/2</span> 页
+					</div>
+					<input type="hidden" id="page_no" name="page_no" value="1"/>
+					<div class="record-btn">
+						<!--    如果是第一页，则只显示下一页、尾页 -->
+						<a href="javascript:void(0);" onclick="javascript:locationPage(1);"><img alt="首页" class="pianyitop3" src="/maile/images/site/icon/start.png"/></a>
+							<a href="javascript:void(0);"><img alt="上一页" class="pianyitop3" src="/maile/images/site/icon/last.png"/></a>
+							<a href="javascript:void(0);" onclick="javascript:locationPage(1+1);"><img alt="下一页" class="pianyitop3" src="/maile/images/site/icon/next.png"/></a>
+						<a href="javascript:void(0);" onclick="javascript:locationPage(2);"><img alt="尾页" class="pianyitop3" src="/maile/images/site/icon/end.png"/></a>
+						<!--     如果是最后一页，则只显示首页、上一页 -->
+						转到第<input type="text" id="location_page_num" name="location_page_num" width="30px" height="14px"/>页
+						<a href="javascript:void(0);" onclick="javascript:locationPage($('#location_page_num').val());"><img alt="跳转" class="pianyitop3" src="/maile/images/site/icon/jump.png"/></a>
+					</div>
+				</div>
+			</div>
+</form>
+			</div>
+		</div>
+		<!-- 第八部分：版权声明-->
+		<div id="body_bottom">
+			<div id="copyright">
+				<div id="website-app" class="left"><img width="116px" height="116px" src="/maile/images/site/icon/app_ningxiajiaoyuting.jpg"/><div class="img-desc">宁夏教育厅微信公众服务平台</div></div>
+				<div>
+					<p>本网站所刊登的宁夏回族自治区教育厅通知、公告、文件等以及其他未注明信息来源的稿件，版权均属宁夏回族自治区教育厅网站所有</p>
+					<p>未经宁夏回族自治区教育信息化管理中心书面协议授权，不得转载、链接或以其他方式复制发表</p>
+					<p>主办单位：宁夏回族自治区教育厅      承办单位：宁夏回族自治区教育信息化管理中心      宁ICP备10000726号</p>
+					<div style="width: 100%;margin: 5px auto;">
+						<div style="width: 30%;height:26px;float: left;text-align: right;position: relative;top: 4px;">
+							
+						</div>
+						<div style="width: 40%;float: left;">
+							<p id="count-service">当前在线<span id="online-num-span" style="margin-left: 5px;margin-right: 5px;">1</span>人，累计访问量<span id="accum-view-span" style="margin-left: 5px;margin-right: 5px;">1</span>人次</p>
+							<script type="text/javascript">
+								$.countPageView({
+									url:"/maile/site/getOnlineUser.do",
+									func:function(pvinfo){
+										$("#online-num-span").text(pvinfo.online_num);
+										$("#accum-view-span").text(addCommas(pvinfo.pv_num));
+									}
+								});
+								function addCommas(nStr)
+								{
+									nStr += '';
+									x = nStr.split('.');
+									x1 = x[0];
+									x2 = x.length > 1 ? '.' + x[1] : '';
+									var rgx = /(\d+)(\d{3})/;
+									while (rgx.test(x1)) {
+										x1 = x1.replace(rgx, '$1' + ',' + '$2');
+									}
+									return x1 + x2;
+								}
+							</script>
+						</div>
+						<div style="width: 30%;float: left;text-align: left;position: relative;top: 4px;">
+							<!-- nxedu.gov.cn Baidu tongji analytics -->
+							<script type="text/javascript">
+								var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+								document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F70e881ddd0fe3a47e9bc9feeec50e264' type='text/javascript'%3E%3C/script%3E"));
+							</script>
+						</div>
+					</div>
+				</div>
+				<div id="ningxiajiaoyu-app" class="right"><img width="116px" height="116px" src="/maile/images/site/icon/app_website.jpg"/><div class="img-desc">宁夏教育厅</div></div>
+			</div>
+		</div>
+	</body>
+	</html> 
