@@ -75,4 +75,15 @@ end
 #details = getTableCells(@tableTr, "ningxia")
 #generateCSV(details)
 #
-loadLocalHtml
+#loadLocalHtml
+#
+page = @agent.get(html)
+puts page.class
+l = page.search('//*[@id="009001"]/div')
+puts l.class
+puts l.text()
+btn = page.search('//*[@id="btn_query"]')
+@agent.submit(nil, btn)
+#l.click
+#pp @agent.current_page()
+
