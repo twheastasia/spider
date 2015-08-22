@@ -8,6 +8,7 @@ require 'CSV'
 #url to be tested
 HTML = 'http://www.nxedu.gov.cn:8080/maile/office/areaoffice.html'
 @allrows = []    #the final result 
+@school_count = {}
 #xpath
 KINDGARDEN_XPATH = '//*[@id="search-box-center"]/table/tbody/tr[1]/td[4]/div/ul/li[2]'
 PRIMARY_SCHOOL_XPATH = '//*[@id="search-box-center"]/table/tbody/tr[1]/td[4]/div/ul/li[3]'
@@ -39,6 +40,11 @@ def collectSchoolInfoFromTable browser, province, city, distinct
       detail["school_city"] = city
       detail["school_distinct"] = distinct
       details.push detail
+      if @school_count[row.[](1).text]
+        @school_count[row.[](1).text] += 1
+      else
+        @school_count[row.[](1).text] = 1
+      end
     end
   end
   details.shift
@@ -67,16 +73,16 @@ def searchSchoolTalbes cityId, distinctId, schoolTypeXpath
   city_name = @browser.li(:id, cityId).text
 
   #get new data which is in the next page 
-  collectSchoolInfoFromTable @browser, "宁夏回族自治区", city_name, distinct_name
-  pageNumber = @browser.span(:xpath, '//*[@id="page-form"]/div[2]/div[3]/div[1]/span[2]').text
-  nextPage = pageNumber.split("/")[0].to_i / pageNumber.split("/")[1].to_i
-  sleep 5
+  #collectSchoolInfoFromTable @browser, "宁夏回族自治区", city_name, distinct_name
+  #pageNumber = @browser.span(:xpath, '//*[@id="page-form"]/div[2]/div[3]/div[1]/span[2]').text
+  #nextPage = pageNumber.split("/")[0].to_i / pageNumber.split("/")[1].to_i
+  #sleep 5
   begin
-    @browser.link(:xpath, '//*[@id="page-form"]/div[2]/div[3]/div[2]/a[3]').click
     sleep 5
     collectSchoolInfoFromTable @browser,  "宁夏回族自治区", city_name, distinct_name
     pageNumber = @browser.span(:xpath, '//*[@id="page-form"]/div[2]/div[3]/div[1]/span[2]').text
     nextPage = pageNumber.split("/")[0].to_i / pageNumber.split("/")[1].to_i
+    @browser.link(:xpath, '//*[@id="page-form"]/div[2]/div[3]/div[2]/a[3]').click
   end while nextPage < 1
 end
 
@@ -98,6 +104,13 @@ end
 
 #generate a csv file which include schools' info
 def generateCSV data
+  CSV.open("school_counts.csv", "wb") do |row|
+    row << ["school_name", "count"]
+    @school_count.each do |cell|
+      row << [cell[0], cell[1]]
+    end
+  end
+  
   CSV.open("schools_form_watir.csv", "wb") do |csv|
     csv << [ "school_name", "school_address", "school_type", "school_url", "school_province", "school_city", "school_distinct"]
     data.each do |cell|
